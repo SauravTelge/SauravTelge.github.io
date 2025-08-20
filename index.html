@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saurav Telge - AI Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;70_0&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .section-title {
+            @apply text-3xl font-bold text-gray-800 dark:text-white mb-8 text-center;
+        }
+        .card {
+            @apply bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105;
+        }
+        .tag {
+            @apply inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-200 mr-2 mb-2;
+        }
+        /* Custom scrollbar for a more subtle look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-500">
+
+    <!-- Header -->
+    <header id="header" class="bg-white dark:bg-gray-800/80 backdrop-blur-sm fixed w-full z-10 shadow-md transition-colors duration-500">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800 dark:text-white">Saurav Telge</a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#about" class="hover:text-blue-500 dark:hover:text-blue-400">About</a>
+                <a href="#experience" class="hover:text-blue-500 dark:hover:text-blue-400">Experience</a>
+                <a href="#projects" class="hover:text-blue-500 dark:hover:text-blue-400">Projects</a>
+                <a href="#skills" class="hover:text-blue-500 dark:hover:text-blue-400">Skills</a>
+                <a href="#contact" class="hover:text-blue-500 dark:hover:text-blue-400">Contact</a>
+            </div>
+             <!-- Dark Mode Toggle -->
+            <button id="darkModeToggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+                <i data-feather="moon" class="dark-icon hidden"></i>
+                <i data-feather="sun" class="light-icon"></i>
+            </button>
+            <button id="mobile-menu-button" class="md:hidden p-2">
+                <i data-feather="menu"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#about" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700">About</a>
+            <a href="#experience" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700">Experience</a>
+            <a href="#projects" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700">Projects</a>
+            <a href="#skills" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700">Skills</a>
+            <a href="#contact" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-gray-700">Contact</a>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section id="home" class="container mx-auto px-6 py-24 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-6xl font-extrabold mb-4">Saurav Telge</h1>
+                <p class="text-2xl text-blue-600 dark:text-blue-400 mb-8">AI Engineer | Computer Vision Specialist</p>
+                <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Passionate about leveraging cutting-edge AI and machine learning to solve real-world problems. Specializing in computer vision and generative AI to build intelligent and efficient systems.
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <a href="https://www.linkedin.com/in/saurav-telge/" target="_blank" class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors duration-300 flex items-center space-x-2">
+                        <i data-feather="linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/saurav-telge" target="_blank" class="bg-gray-800 text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-900 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors duration-300 flex items-center space-x-2">
+                         <i data-feather="github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 bg-white dark:bg-gray-800">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">About Me</h2>
+                <div class="flex flex-col md:flex-row items-center gap-10">
+                    <div class="md:w-1/3 text-center">
+                        <img src="https://placehold.co/300x300/E2E8F0/4A5568?text=ST" alt="Saurav Telge" class="rounded-full mx-auto shadow-lg w-64 h-64 object-cover">
+                    </div>
+                    <div class="md:w-2/3 text-lg text-gray-600 dark:text-gray-300 space-y-4">
+                        <p>
+                            I'm a recent graduate from the University of Michigan with a Master of Science in Electrical and Computer Engineering, specializing in Computer Vision. My academic journey and professional experiences have equipped me with a strong foundation in machine learning, generative AI, and natural language processing.
+                        </p>
+                        <p>
+                            Currently, as an AI Engineer at Rediminds, Inc., I'm finetuning Vision-based LLMs and OCR engines to innovate within the healthcare sector. My goal is to build robust, scalable, and impactful AI solutions that drive efficiency and create value.
+                        </p>
+                         <p>
+                            When I'm not working with models and data, I enjoy exploring new technologies and contributing to open-source projects.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Work Experience</h2>
+                <div class="relative max-w-3xl mx-auto">
+                    <div class="absolute left-1/2 -translate-x-1/2 h-full w-1 bg-gray-300 dark:bg-gray-700 rounded-full"></div>
+                    <!-- Experience Item 1 -->
+                    <div class="relative mb-12">
+                        <div class="absolute w-8 h-8 bg-blue-500 rounded-full left-1/2 -translate-x-1/2 top-0 border-4 border-white dark:border-gray-900"></div>
+                        <div class="w-full md:w-1/2 md:pr-8 md:text-right">
+                            <div class="p-6 card">
+                                <p class="text-sm text-gray-500 dark:text-gray-400">May 2024 - Present</p>
+                                <h3 class="text-xl font-bold mb-2">AI Engineer</h3>
+                                <p class="italic text-gray-600 dark:text-gray-300">Rediminds, Inc (Healthcare startup)</p>
+                                <p class="mt-2 text-gray-600 dark:text-gray-400 text-left">Finetuned Vision-LLMs and OCR to extract information from medical documents, reducing decision time by 40%. Built and deployed end-to-end ML applications on GCP.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Experience Item 2 -->
+                    <div class="relative mb-12">
+                        <div class="absolute w-8 h-8 bg-blue-500 rounded-full left-1/2 -translate-x-1/2 top-0 border-4 border-white dark:border-gray-900"></div>
+                        <div class="w-full md:w-1/2 md:ml-auto md:pl-8">
+                            <div class="p-6 card">
+                                <p class="text-sm text-gray-500 dark:text-gray-400">June 2023 - Dec 2023</p>
+                                <h3 class="text-xl font-bold mb-2">Data Scientist Intern</h3>
+                                <p class="italic text-gray-600 dark:text-gray-300">OneMagnify (Ford Direct)</p>
+                                <p class="mt-2 text-gray-600 dark:text-gray-400">Developed predictive models (ARIMA, GBMs) to optimize customer purchase propensity, increasing scores by 15%. Managed large datasets with PySpark and MySQL.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-white dark:bg-gray-800">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="card">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Structured Data Pipeline for Dynamic Design Automation</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">Orchestrated LLMs and vision models to parse product documents and images, extracting features into a unified JSON structure for design automation.</p>
+                            <div>
+                                <span class="tag">LLM Orchestration</span>
+                                <span class="tag">GCP</span>
+                                <span class="tag">Figma API</span>
+                                <span class="tag">API Development</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="card">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Credit Card Fraud Detection System</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">Trained and deployed an XGBoost model on AWS Sagemaker, achieving 92% precision in detecting fraudulent transactions.</p>
+                            <div>
+                                <span class="tag">AWS Sagemaker</span>
+                                <span class="tag">XGBoost</span>
+                                <span class="tag">PCA</span>
+                                <span class="tag">Machine Learning</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="card">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">CogniCare: Alzheimer's Patient Companion App</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">A hackathon-winning app using OpenAI GPT-4 to enhance memory recall for Alzheimer's patients through personalized cognitive exercises.</p>
+                            <div>
+                                <span class="tag">OpenCV</span>
+                                <span class="tag">GPT-4</span>
+                                <span class="tag">Django</span>
+                                <span class="tag">Face Recognition</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="max-w-4xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                            <i data-feather="code" class="mx-auto h-12 w-12 text-blue-500 mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2">Languages</h3>
+                            <p class="text-gray-600 dark:text-gray-300">Python, Java, SQL, MATLAB, C++</p>
+                        </div>
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                            <i data-feather="database" class="mx-auto h-12 w-12 text-blue-500 mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2">Frameworks & Tech</h3>
+                            <p class="text-gray-600 dark:text-gray-300">MySQL, Oracle DB, Databricks, Power BI, Flask, ML Libraries</p>
+                        </div>
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                            <i data-feather="tool" class="mx-auto h-12 w-12 text-blue-500 mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2">Developer Tools</h3>
+                            <p class="text-gray-600 dark:text-gray-300">GCP (Vertex AI), AWS (SageMaker, Lambda), Linux, GIT, Postman</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Education Section -->
+        <section id="education" class="py-20 bg-white dark:bg-gray-800">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Education</h2>
+                <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="p-6 card text-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/University_of_Michigan_logo.svg/2560px-University_of_Michigan_logo.svg.png" 
+                             alt="University of Michigan Logo" 
+                             class="h-16 mx-auto mb-4"
+                             onerror="this.onerror=null;this.src='https://placehold.co/200x60/00274C/FFCB05?text=Michigan';">
+                        <h3 class="text-xl font-bold">University of Michigan</h3>
+                        <p class="italic text-gray-600 dark:text-gray-300">M.Sc. in Electrical and Computer Engineering</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">2022 - 2024</p>
+                    </div>
+                    <div class="p-6 card text-center">
+                         <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/52/University_of_Mumbai_logo.svg/1200px-University_of_Mumbai_logo.svg.png" 
+                              alt="University of Mumbai Logo" 
+                              class="h-16 mx-auto mb-4"
+                              onerror="this.onerror=null;this.src='https://placehold.co/200x60/FFFFFF/000000?text=Mumbai';">
+                         <h3 class="text-xl font-bold">University of Mumbai</h3>
+                        <p class="italic text-gray-600 dark:text-gray-300">B.E. in Computer Engineering</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">2018 - 2022</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+                    I'm currently looking for new opportunities. If you have a project in mind or just want to connect, feel free to reach out!
+                </p>
+                <a href="mailto:sauravt@umich.edu" class="bg-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-700 transition-colors duration-300 inline-flex items-center space-x-2 text-lg">
+                    <i data-feather="mail"></i>
+                    <span>sauravt@umich.edu</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-800 py-8">
+        <div class="container mx-auto px-6 text-center text-gray-600 dark:text-gray-400">
+            <div class="flex justify-center space-x-6 mb-4">
+                 <a href="https://www.linkedin.com/in/saurav-telge/" target="_blank" class="hover:text-blue-500 dark:hover:text-blue-400"><i data-feather="linkedin"></i></a>
+                 <a href="https://github.com/saurav-telge" target="_blank" class="hover:text-blue-500 dark:hover:text-blue-400"><i data-feather="github"></i></a>
+            </div>
+            <p>&copy; 2024 Saurav Telge. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Feather Icons
+        feather.replace();
+
+        // Mobile Menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const html = document.documentElement;
+        const darkIcon = document.querySelector('.dark-icon');
+        const lightIcon = document.querySelector('.light-icon');
+
+        // Check for saved theme in localStorage
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+            darkIcon.classList.remove('hidden');
+            lightIcon.classList.add('hidden');
+        } else {
+            html.classList.remove('dark');
+            darkIcon.classList.add('hidden');
+            lightIcon.classList.remove('hidden');
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            if (html.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+                darkIcon.classList.remove('hidden');
+                lightIcon.classList.add('hidden');
+            } else {
+                localStorage.setItem('theme', 'light');
+                darkIcon.classList.add('hidden');
+                lightIcon.classList.remove('hidden');
+            }
+        });
+        
+        // Hide header on scroll down, show on scroll up
+        let lastScrollTop = 0;
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                // Downscroll
+                header.style.top = '-80px';
+            } else {
+                // Upscroll
+                header.style.top = '0';
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+        }, false);
+
+    </script>
+</body>
+</html>
